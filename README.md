@@ -33,3 +33,6 @@ Para rodar esse projeto, use o .env example para configurar as variaveis de ambi
 O Objetivo deste Projeto é criar uma API que realize o gerenciamento de uma barbearia.
 Praticar os fundamentos de deploy na vercel.
 
+## Funcionalidades
+
+Na versão atual desta API é possivel realizar o CRUD (CREATE, READ, UPDATE AND DELETE) da rota barbeiro, simulando assim o gerenciamento dos funcionairos de uma barbearia.
