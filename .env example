@@ -1,5 +1,5 @@
 PORT=7002
-DATABASE_URL='mongodb+srv://admin:admin@cluter0.jwzgfsc.mongodb.net/?retryWrites=true&w=majority&appName=Cluter0'
+DATABASE_URL='conexao'
 
 SWAGGER_DEV_URL="http://localhost:7002"
 SWAGGER_PROD_URL="http://localhost:7002"
