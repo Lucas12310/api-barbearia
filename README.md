@@ -31,4 +31,5 @@ Para rodar esse projeto, use o .env example para configurar as variaveis de ambi
 ## Objetivo do Projeto
 
 O Objetivo deste Projeto é criar uma API que realize o gerenciamento de uma barbearia.
+Praticar os fundamentos de deploy na vercel.
 
