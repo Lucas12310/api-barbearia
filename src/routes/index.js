@@ -1,6 +1,5 @@
 import express from "express";
 import barbeiro from "../routes/barbeiroRouter.js";
-// Imports do Swagger
 import swaggerJsDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
 import getSwaggerOptions from "../docs/config/head.js";
@@ -16,6 +15,10 @@ const routes = (app) => {
         customCssUrl: [
             "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css" // Usando o CSS do Swagger diretamente do CDN
         ],
+        customJsUrl: [
+            "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.js", // Usando o JS do Swagger diretamente do CDN
+            "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js" // Usando o JS adicional do Swagger via CDN
+        ],
         customSiteTitle: "API Barbeiro", // Personalizando o título da página de documentação
     }));
 
@@ -28,4 +31,5 @@ const routes = (app) => {
 };
 
 export default routes;
+
 
