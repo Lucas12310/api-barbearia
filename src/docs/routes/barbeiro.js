@@ -1,7 +1,7 @@
 import barbeiroSchemas from "../schemas/barbeiro.js";
 
 const barbeiroRoutes = {
-  "/barbeiro": {
+  '/barbeiro': {
     get: {
       tags: ["Barbeiro"],
       summary: "Lista todos os barbeiros cadastrados",
