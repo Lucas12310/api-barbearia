@@ -12,13 +12,7 @@ const routes = (app) => {
 
     // Configurando a documentação do Swagger UI
     app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc(getSwaggerOptions()), {
-        customCssUrl: [
-            "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css" // Usando o CSS do Swagger diretamente do CDN
-        ],
-        customJsUrl: [
-            "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.js", // Usando o JS do Swagger diretamente do CDN
-            "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js" // Usando o JS adicional do Swagger via CDN
-        ],
+        customCssUrl: [ "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css" ],
         customSiteTitle: "API Barbeiro", // Personalizando o título da página de documentação
     }));
 
