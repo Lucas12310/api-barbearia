@@ -7,12 +7,12 @@ import getSwaggerOptions from "../docs/config/head.js";
 
 const routes = (app) => {
     // Configurando a documentação da Swagger UI para ser servida diretamente em '/'
-    const swaggerDocs = swaggerJsDoc(getSwaggerOptions());
-    app.use(swaggerUI.serve);
-    app.get("/", (req, res, next) => {
-        swaggerUI.setup(swaggerDocs)(req, res, next);
-    });
-
+    app.get("/",(req, res) => {
+		res.status(200).redirect("docs"); // redirecionando para documentação
+	});
+    app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc(getSwaggerOptions()), {
+		customCssUrl: [ "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css" ]
+	}));
     app.use(
         express.json(),
         express.text(),
