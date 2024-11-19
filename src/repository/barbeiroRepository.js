@@ -1,7 +1,12 @@
+
+import * as dotenv from 'dotenv';
+
+dotenv.config()
+
 import mongoose from "mongoose"
 const DATABASE_URL = process.env.DATABASE_URL
 
-mongoose.connect('mongodb+srv://admin:admin@cluter0.jwzgfsc.mongodb.net/?retryWrites=true&w=majority&appName=Cluter0')
+mongoose.connect(DATABASE_URL)
 
 const Barbeiro = mongoose.model('Barbeiro',{
     nome: String,
